@@ -1,0 +1,618 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Buttons styling */
+.btn {
+    border-radius: 20px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #65558F;
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4D3A6A;
+}
+
+.btn-primary:active {
+    background-color: #79747E;
+}
+
+.btn-cancel {
+    background-color: #FFFFFF;
+    color: #65558F;
+    border: 1px solid #79747E;
+}
+
+.btn-cancel:hover {
+    background-color: #F5F5F5;
+}
+
+.btn-cancel:active {
+    background-color: #79747E;
+}
+
+.btn-text {
+    height: 20px;
+    background-color: #FFFFFF;
+    color: #FF3B30;
+    border: none;
+}
+
+.btn-icon {
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn-icon:hover {
+    background-color: #F5F5F5;
+}
+
+.btn-icon:active {
+    background-color: #79747E;
+}
+/* Icons styling */
+
+.icon-btn {
+    margin-right: 8px;
+}
+
+/* Main container styling */
+.container {
+    min-width: 900px;
+    height: 100vh;
+    min-height: 0;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar styling */
+.agents-section {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.add-agent-btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 17px;
+    margin-right: 17px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.agents-list {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: auto;
+}
+
+.agent-container {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+    cursor: pointer;
+}
+
+.agent-container:hover {
+    background-color: #F5F5F5;
+}
+
+.agent-container.active {
+    background-color: #EADDFF;
+}
+
+.agent-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.agent-info-container {
+    flex:1;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.agent-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #757575;
+    margin: 0px;
+}
+
+.agent-description {
+    font-size: 16px;
+    color: #B3B3B3;
+    margin: 0px;
+}
+
+/* Chat section styling */
+.chat-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    min-height: 0;
+}
+
+.chat-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.chat-header-title {
+    display: none;
+    font-size: 20px;
+    color: #000000;
+    margin: 0px;
+}
+
+#chat-header-title {
+    display: none;
+}
+
+#setting-btn {
+    display: none;
+}
+
+.chat-list {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.incomig-message-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.incoming-message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.incoming-message-bubble {
+    max-width: 70%;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #ECE6F0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 8px;
+}
+
+.incoming-message-text {
+    color: #000000;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.outgoing-message-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.outgoing-message-bubble {
+    max-width: 70%;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #625B71;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 20px;
+}
+
+.outgoing-message-text {
+    margin: 0px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.chat-footer {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.chat-input-field {
+    flex: 1;
+    height: 36px;
+    font-size: 16px;
+    color: #000000;
+    margin-left: 13px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    border: none;
+}
+
+#send-btn {
+    height: 24px;
+    width: 24px;
+    margin-right: 13px;
+    margin-left: 13px;
+    padding: 0px;
+}
+
+/* Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;  
+    background-color: rgba(0,0,0,0.3); 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #FFFFFF;
+  }
+
+  .modal-title {
+    font-size: 24px;
+    color: #000000;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-bottom: 0px;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 12px;
+    margin-right: 12px;
+    gap: 12px;
+  }
+
+  /* Create agent modal */
+  #create-agent-modal-content {
+    width: 424px;
+    height: 337px;
+  }
+
+  .input-label {
+    height: 22px;
+    font-size: 16px;
+    color: #000000;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+  }
+
+  .input-field {
+    width: 368px;
+    font-size: 16px;
+    color: #000000;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+  }
+
+  .input-textarea {
+    width: 368px;
+    height: 56px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+  }
+
+    /* Agent settings modal */
+    /*  <div class="modal" id="agent-settings-modal">
+        <div class="modal-content" id="agent-settings-modal-content">
+            <p class="modal-title">Settings</p>
+            <div class="agent-settings-avatar-container">
+                <img clas="agent-settings-avatar-image" src="{{ url_for('static', filename='images/agent_avatar_large.png') }}"></img>
+            </div>
+            <div class="agent-settings-name">
+                <p class="agent-settings-name-text" id="agent-settings-name-text">Name</p>
+            </div>
+            <div class="agent-settings-description">
+                <p class="agent-settings-description-text" id="agent-settings-description-text">Description</p>
+            </div>
+            <div class="agent-settings-delete-agent">
+                <button class="btn btn-text" id="agent-settings-delete-agent-btn">Delete agent</button>
+            </div>
+            <div class="add-file-container">
+                <p class="input-label">Add file</p>
+                <div class="add-file-input-container">
+                    <input type="file" id="add-file-input" class="add-file-input"></input>
+                    <button class="btn btn-primary" id="add-file-btn">Upload</button>
+                </div>
+            </div>
+            <div class="add-website-container">
+                <p class="input-label">Add website</p>
+                <div class="add-website-input-container">
+                    <input type="text" id="add-website-input" class="add-website-input" placeholder="Enter website URL"></input>
+                    <button class="btn btn-primary" id="add-website-btn">Upload</button>
+                </div>
+            </div>
+            <p class="input-label">Items</p>
+            <div class="content-items-container" id="content-items-container">
+                <!-- Content items will be displayed here -->
+                 <div class="content-item">
+                    <div class="content-item-picture">
+                        <img src="{{ url_for('static', filename='images/file_icon.png') }}"></img>
+                    </div>
+                    <div class="content-item-name">
+                        <p class="content-item-name-text">File name</p>
+                    </div>
+                    <div class="content-item-delete">
+                        <button class="btn-icon" id="content-item-delete-btn"> 
+                            <img src="{{ url_for('static', filename='images/delete_icon.png') }}"></img>
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </div> */
+
+#agent-settings-modal-content {
+    width: 726px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.agent-settings-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.agent-settings-avatar-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.agent-settings-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.agent-settings-name-text {
+    font-size: 20px;
+    color: #000000;
+    margin: 0px;
+    width: 90%;
+    text-align: center;
+}
+
+.agent-settings-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.agent-settings-description-text {
+    font-size: 16px;
+    color: #B3B3B3;
+    margin: 0px;
+    width: 90%;
+    text-align: center;
+}
+
+.agent-settings-delete-agent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add-file-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 10px;
+}
+
+.add-file-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.add-file-input {
+    flex: 1;
+    font-size: 16px;
+    color: #000000;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+#add-file-btn {
+    margin-right: 12px;
+}
+
+.add-website-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 10px;
+}
+
+.add-website-input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.add-website-input {
+    flex: 1;
+    font-size: 16px;
+    color: #000000;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+#add-website-btn {
+    margin-right: 12px;
+}
+
+.content-items-container {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    overflow: auto;
+    min-height: 0;
+}
+
+.content-item {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.content-item-picture {
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.content-item-picture img {
+    width: 32px;
+    height: 32px;
+}
+
+.content-item-name {
+    flex: 1;
+    font-size: 16px;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.content-item-delete {
+    margin-right: 12px;
+}
+
+#content-item-delete-btn {
+    background-color: #FFFFFF;
+    border: none;
+}
+
+#content-item-delete-btn:hover {
+    background-color: #F5F5F5;
+}
+
+#content-item-delete-btn:active {
+    background-color: #79747E;
+}
+

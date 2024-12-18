@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agents</title>
+    <!-- Smart Agents CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Smart Agents JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="agents-section">
+            <button class="btn btn-primary add-agent-btn" id="add-agent-btn">
+                <img class="icon-btn" src="{{ url_for('static', filename='images/plus_icon.png') }}"></img>
+                Agent
+            </button>
+            <div class="agents-list" id="agents-list">
+                <!-- Agents list will be displayed here -->
+            </div>
+        </div>
+        <div class="chat-section">
+            <div class="chat-header">
+                <p class="chat-header-title" id="chat-header-title"></p>
+                <button class="btn-icon" id="setting-btn">
+                    <img src="{{ url_for('static', filename='images/settings.png') }}"></img>
+                </button>
+            </div>
+            <div class="chat-list" id="chat-list">
+                <!-- Chat list will be displayed here -->
+    
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" class="chat-input-field" placeholder="Type a message"></input>
+                <button class="btn-icon" id="send-btn">
+                    <img src="{{ url_for('static', filename='images/send.png') }}"></img>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Create Agent Modal -->
+    <div class="modal" id="create-agent-modal">
+        <div class="modal-content" id="create-agent-modal-content">
+            <p class="modal-title">Create Agent</p>
+            <p class="input-label">Name</p>
+            <input type="text" id="create-agent-name-input" class="input-field" placeholder="Enter agent name"></input>
+            <p class="input-label">Description</p>
+            <textarea id="create-agent-description-input" class="input-textarea" placeholder="Enter agent description"
+                maxlength="100"></textarea>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="create-agent-create-btn">Create</button>
+                <button class="btn btn-cancel" id="create-agent-cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agent Settings Modal -->
+    <div class="modal" id="agent-settings-modal">
+        <div class="modal-content" id="agent-settings-modal-content">
+            <p class="modal-title">Settings</p>
+            <div class="agent-settings-avatar-container">
+                <img clas="agent-settings-avatar-image"
+                    src="{{ url_for('static', filename='images/agent_avatar_large.png') }}"></img>
+            </div>
+            <div class="agent-settings-name">
+                <p class="agent-settings-name-text" id="agent-settings-name-text">Name</p>
+            </div>
+            <div class="agent-settings-description">
+                <p class="agent-settings-description-text" id="agent-settings-description-text">Description</p>
+            </div>
+            <div class="agent-settings-delete-agent">
+                <button class="btn btn-text" id="agent-settings-delete-agent-btn">Delete agent</button>
+            </div>
+            <div class="add-file-container">
+                <p class="input-label">Add file</p>
+                <div class="add-file-input-container">
+                    <input type="file" id="add-file-input" class="add-file-input" accept=".txt,.pdf"></input>
+                    <button class="btn btn-primary" id="add-file-btn">Upload</button>
+                </div>
+            </div>
+            <div class="add-website-container">
+                <p class="input-label">Add website</p>
+                <div class="add-website-input-container">
+                    <input type="text" id="add-website-input" class="add-website-input"
+                        placeholder="Enter website URL"></input>
+                    <button class="btn btn-primary" id="add-website-btn">Upload</button>
+                </div>
+            </div>
+            <p class="input-label">Items</p>
+            <div class="content-items-container" id="content-items-container">
+                <!-- Content items will be displayed here -->
+        
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
